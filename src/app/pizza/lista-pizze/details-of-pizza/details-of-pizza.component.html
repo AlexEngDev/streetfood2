@@ -1,0 +1,16 @@
+<button class="btn btn-success" type="button" (click)="switchDiv()">{{ pizza.nome }}</button>
+
+<div *ngIf="switch">
+  <ul>
+    <li>ID: {{ pizza.id }}</li>
+    <li>Prezzo: {{ pizza.prezzo | currency }}</li>
+    <li>Pizzaiolo {{ pizza.pizzaiolo.nome }} {{ pizza.pizzaiolo.cognome }}</li>
+    <li>
+      Ingredienti: {{ pizza.ingredienti[0].nomeIngrediente }}
+      {{ pizza.ingredienti[1].nomeIngrediente }}
+      {{ pizza.ingredienti[2].nomeIngrediente }}
+    </li>
+    <div class="images"><img [src]="pizza.immagine" [alt]="pizza.nome" /></div>
+  </ul>
+  <button class="btn btn-warning" type="button" (click)="comprarePizza()">Comprare</button>
+</div>

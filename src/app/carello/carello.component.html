@@ -1,0 +1,20 @@
+<p>Carello</p>
+<div *ngIf="pizzaAggiunta != null">
+  <div *ngFor="let pizza of pizzaAggiunta">
+    <ul>
+      <li>ID: {{ pizza.id }}</li>
+      <li>Prezzo: {{ pizza.prezzo | currency }}</li>
+      <li>
+        Pizzaiolo {{ pizza.pizzaiolo.nome }} {{ pizza.pizzaiolo.cognome }}
+      </li>
+      <li>
+        Ingredienti: {{ pizza.ingredienti[0].nomeIngrediente }}
+        {{ pizza.ingredienti[1].nomeIngrediente }}
+        {{ pizza.ingredienti[2].nomeIngrediente }}
+      </li>
+      <div class="images">
+        <img [src]="pizza.immagine" [alt]="pizza.nome" />
+      </div>
+    </ul>
+  </div>
+</div>
