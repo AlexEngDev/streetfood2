@@ -1,5 +1,6 @@
-<p>Carello</p>
-<div *ngIf="pizzaAggiunta != null">
+<h2>Carello</h2>
+<li>Quantita Totale: {{ pizzaAggiunta.length }}</li>
+<div *ngIf="pizzaAggiunta != null" class="carello-component">
   <div *ngFor="let pizza of pizzaAggiunta">
     <ul>
       <li>ID: {{ pizza.id }}</li>

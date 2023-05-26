@@ -21,14 +21,12 @@ pizzaAggiunta:Pizza[];
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    //this.pizzaAggiunta=this.carello.returnPizze()
-    //this.shovCarello()
   }
-
 
   shovCarello(){
-    //console.log(this.carello.returnPizze());
     this.pizzaAggiunta = this.carello.returnPizze()
   }
+
+
 
 }
